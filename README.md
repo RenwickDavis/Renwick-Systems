@@ -13,11 +13,11 @@ The Cloudflare project `renwick-systems` (account Renwickdavis.rd@gmail.com, Wor
 production branch `dev`, no build command, deploy command `npx wrangler deploy`, root `/`. Every push to `dev` deploys the
 site; `wrangler.jsonc` tells wrangler to serve `public/` as static assets (so the README and the config are never served).
 `renwicksystems.com` is a custom domain on the Worker and answers 200.
-Still the owner's hand in the dashboard: the custom domain `www.renwicksystems.com` (Worker -> Domains & Routes); a redirect
-from `renwicksystems.net` to the .com (the .net zone needs one proxied record and a redirect rule); Web Analytics on the
-zone (Analytics -> Web analytics -> add `renwicksystems.com`: with the zone proxied, no script tag is needed); Email Routing on
-the zone (Email -> Email Routing -> enable, route `hello@renwicksystems.com` to the owner's mailbox; the MX records are
-Cloudflare's).
+DONE in the dashboard 2026-10-19 (the owner's yes on each; read back): custom domains `www.renwicksystems.com`,
+`renwicksystems.net` and `www.renwicksystems.net` on the Worker; a Single Redirect on the .net zone (".net to
+renwicksystems.com": all requests -> `concat("https://renwicksystems.com", http.request.uri.path)`, 301, query string kept);
+Web Analytics on `renwicksystems.com` with automatic setup (no script tag); Email Routing on the .com zone (Cloudflare's three
+MX + the SPF TXT, destination renwickdavis.rd@gmail.com verified, rule hello@renwicksystems.com -> that mailbox).
 
 ## The form -> HubSpot (free CRM, portal 247736001)
 HubSpot -> Marketing -> Forms -> Create -> Embedded form, named "Renwick Systems - start". Five fields, in this order, mapped to
