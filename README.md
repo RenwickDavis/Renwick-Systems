@@ -8,14 +8,16 @@ Two static files: `index.html` (the page: the method, the four packages at the p
 `docs/SAAS_OFFER_PACKAGES_2026-10-19.md`, Project Legacy as the first case study, the founder, the form) and `privacy.html`.
 No framework, no build step, no external script. Light and dark follow the visitor's system.
 
-## Deploy (Cloudflare Pages, free; the owner's hand)
-1. Cloudflare dashboard -> Workers & Pages -> Create -> Pages -> Upload assets -> upload this folder (both files).
-   Project name `renwick-systems`.
-2. Custom domains: add `renwicksystems.com` and `www.renwicksystems.com` (the zone is already on Cloudflare); redirect
-   `renwicksystems.net` to the .com with a Bulk Redirect.
-3. Web Analytics (cookieless, first-party): Cloudflare -> Analytics & Logs -> Web Analytics -> add the site; paste the one
-   `<script>` tag it gives into `index.html` before `</body>` (it is the only script the page will ever carry).
-4. Email: Cloudflare -> Email Routing on the zone -> route `hello@renwicksystems.com` to the owner's mailbox.
+## Deploy (a Git-connected Cloudflare Worker serving static assets; set up by the owner 2026-10-19)
+The Cloudflare project `renwick-systems` (account Renwickdavis.rd@gmail.com, Workers & Pages) is connected to this repository:
+production branch `dev`, no build command, deploy command `npx wrangler deploy`, root `/`. Every push to `dev` deploys the
+site; `wrangler.jsonc` tells wrangler to serve `public/` as static assets (so the README and the config are never served).
+`renwicksystems.com` is a custom domain on the Worker and answers 200.
+Still the owner's hand in the dashboard: the custom domain `www.renwicksystems.com` (Worker -> Domains & Routes); a redirect
+from `renwicksystems.net` to the .com (the .net zone needs one proxied record and a redirect rule); Web Analytics on the
+zone (Analytics -> Web analytics -> add `renwicksystems.com`: with the zone proxied, no script tag is needed); Email Routing on
+the zone (Email -> Email Routing -> enable, route `hello@renwicksystems.com` to the owner's mailbox; the MX records are
+Cloudflare's).
 
 ## The form -> HubSpot (free CRM, portal 247736001)
 HubSpot -> Marketing -> Forms -> Create -> Embedded form, named "Renwick Systems - start". Five fields, in this order, mapped to

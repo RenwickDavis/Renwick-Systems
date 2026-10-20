@@ -1,0 +1,12 @@
+// Renwick Systems - the site as a Cloudflare Worker serving static assets (the dashboard project "renwick-systems",
+// Git-connected to this repository, production branch dev, deploy command `npx wrangler deploy`, root /).
+// No build step: the two pages in public/ are the whole site. 2026-10-19.
+{
+  "name": "renwick-systems",
+  "compatibility_date": "2026-10-19",
+  "assets": {
+    "directory": "./public",
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash"
+  }
+}
