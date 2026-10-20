@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Renwick Systems</title>
+<meta name="description" content="AI applications that are right about your numbers, cost a few hundred dollars a month to run, and one person can operate. Renwick Systems, Ohio.">
+<link rel="canonical" href="https://renwicksystems.com/">
+<style>
+  :root { --bg:#fbfaf7; --fg:#1b1f23; --muted:#5b6470; --line:#e3e0d8; --accent:#0f6e6a; --accent-ink:#ffffff; --card:#ffffff; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#121417; --fg:#ecebe6; --muted:#a3aab3; --line:#2a2f36; --accent:#4cc1b9; --accent-ink:#0d1b1a; --card:#1a1e23; } }
+  :root[data-theme="dark"] { --bg:#121417; --fg:#ecebe6; --muted:#a3aab3; --line:#2a2f36; --accent:#4cc1b9; --accent-ink:#0d1b1a; --card:#1a1e23; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:17px/1.55 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  main, header, footer { max-width:860px; margin:0 auto; padding:0 16px; }
+  header { padding-top:28px; display:flex; justify-content:space-between; align-items:baseline; }
+  .brand { font-weight:700; letter-spacing:.02em; text-decoration:none; color:var(--fg); }
+  nav a { color:var(--muted); text-decoration:none; margin-left:18px; font-size:15px; }
+  h1 { font-size:clamp(30px, 5vw, 44px); line-height:1.15; margin:48px 0 16px; letter-spacing:-.01em; }
+  h2 { font-size:clamp(22px, 3vw, 28px); margin:56px 0 12px; }
+  h3 { font-size:19px; margin:0 0 6px; }
+  p { margin:0 0 14px; }
+  .lead { font-size:20px; color:var(--muted); max-width:640px; }
+  .cta { display:inline-block; background:var(--accent); color:var(--accent-ink); padding:12px 20px; border-radius:8px; text-decoration:none; font-weight:600; margin-top:10px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:16px; margin-top:16px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:18px; }
+  .price { color:var(--accent); font-weight:700; }
+  .muted { color:var(--muted); }
+  ul { padding-left:20px; } li { margin-bottom:6px; }
+  form { display:grid; gap:12px; max-width:520px; }
+  label { font-size:14px; color:var(--muted); display:grid; gap:4px; }
+  input, select, textarea { font:inherit; padding:10px 12px; border:1px solid var(--line); border-radius:8px; background:var(--card); color:var(--fg); width:100%; }
+  button { font:inherit; font-weight:600; background:var(--accent); color:var(--accent-ink); border:0; border-radius:8px; padding:12px 18px; cursor:pointer; }
+  footer { border-top:1px solid var(--line); margin-top:64px; padding:24px 16px 40px; font-size:14px; color:var(--muted); }
+  footer a { color:var(--muted); }
+</style>
+</head>
+<body>
+<header>
+  <a class="brand" href="/">Renwick Systems</a>
+  <nav><a href="#how">How we build</a><a href="#packages">Packages</a><a href="#work">Our work</a><a href="#start">Start</a></nav>
+</header>
+
+<main>
+  <h1>AI applications that are right about your numbers, cost a few hundred dollars a month to run, and one person can operate.</h1>
+  <p class="lead">Most AI projects fail on three fears: the model makes numbers up, the cloud bill runs away, and keeping it alive takes a team. We build the other kind.</p>
+  <a class="cta" href="#start">Book a Discovery week</a>
+
+  <h2 id="how">How we build</h2>
+  <div class="grid">
+    <div class="card"><h3>Your numbers are computed, never guessed</h3><p>Your rules and your figures are computed by engines that cannot invent a value. The language model only puts the result into words. When a value cannot be computed, the system says so instead of filling it in.</p></div>
+    <div class="card"><h3>Every rule is a check that fails</h3><p>A rule the system must keep is written as a test that breaks when the rule is broken, and the build does not ship past a broken one. Nothing lives only in a document.</p></div>
+    <div class="card"><h3>A few hundred dollars a month</h3><p>Scale-to-zero infrastructure that costs nothing while idle, one GPU service where a model is needed, and a weekly read of the bill against a budget you set.</p></div>
+    <div class="card"><h3>One person can operate it</h3><p>Daily and weekly routines read the system's health, its service levels and its spend, and post the record. We install them with the system and run them for you if you want.</p></div>
+  </div>
+
+  <h2 id="packages">Four packages, fixed prices</h2>
+  <p class="muted">Every package is a fixed scope at a fixed price. We never bill by the hour. Half of any build is due on signing; a scope change is a new quote.</p>
+  <div class="grid">
+    <div class="card"><h3>Discovery week</h3><p class="price">$6,000 · five working days</p><p>Your rules written down as rules. Where your numbers live and who owns them. What "right" means for your business, in a sentence you sign. A build plan with a fixed price for the prototype. If the problem does not need AI, the plan says so.</p></div>
+    <div class="card"><h3>Prototype</h3><p class="price">$24,000 · four weeks</p><p>The engines that compute your numbers, one verified path end to end on your real data, the model wording the result, the checks that prove it. You keep the code.</p></div>
+    <div class="card"><h3>Pilot, 60 days</h3><p class="price">$8,000</p><p>The prototype live with your people, weekly adjustments from what they meet, the operating routines installed. At day 60 you have the record to decide on.</p></div>
+    <div class="card"><h3>Operate</h3><p class="price">$1,800 a month · cloud at cost</p><p>Hosting on your cloud or ours, the routines run and read, fixes within scope, a monthly report of service levels and the bill. Twelve-month term.</p></div>
+  </div>
+
+  <h2 id="work">Our work: Project Legacy</h2>
+  <p>Project Legacy is a family application and a companion staff application, built end to end by Renwick Systems' founder over sixteen weeks and shipped to the stores. Its content is computed by engines from each family's own data; a set of fine-tuned language models only words the result, and a verification layer recomputes every value independently before it is served.</p>
+  <ul>
+    <li>One GPU service carrying eleven fine-tuned adapters, scaling to zero between requests; one background worker; one queue.</li>
+    <li>About $500 a month to run, with a weekly bill read against that budget.</li>
+    <li>One operator, with daily and weekly routines that post the system's health, service levels and spend to a ledger.</li>
+    <li>A public architecture record and blameless incident reports, written the day of the incident.</li>
+  </ul>
+  <p class="muted">Project Legacy is the founder's own product; it is the first case study, and the method it was built with is what Renwick Systems sells.</p>
+
+  <h2>Who builds it</h2>
+  <p>Renwick Davis, M.S. Computer Science. Formerly with the Department of Defense; a veteran of the 82nd Airborne Division. Renwick Systems is a veteran-owned business in Ohio.</p>
+
+  <h2 id="start">Start with a Discovery week</h2>
+  <p class="muted">Tell us what you need to be right. We reply within one working day.</p>
+  <!-- The form posts to HubSpot (the free CRM): create the form in HubSpot (Marketing > Forms) with these five fields and paste its embed code here in place of this form, or keep this form and point its action at the HubSpot Forms endpoint for that form. See README.md. -->
+  <form id="start-form" method="post" action="#" onsubmit="return false;">
+    <label>Your name <input name="firstname" autocomplete="name" required></label>
+    <label>Business <input name="company" autocomplete="organization" required></label>
+    <label>Work email <input name="email" type="email" autocomplete="email" required></label>
+    <label>What do you need to be right? <textarea name="message" rows="3" required></textarea></label>
+    <label>Interested in
+      <select name="offer">
+        <option value="discovery_week">Discovery week</option>
+        <option value="prototype">Prototype</option>
+        <option value="pilot_60_days">Pilot, 60 days</option>
+        <option value="operate">Operate</option>
+      </select>
+    </label>
+    <button type="submit">Send</button>
+    <p class="muted" style="font-size:13px">We keep what you send in our CRM to reply to you and for nothing else. No advertising trackers on this site. <a href="/privacy.html">Privacy</a>.</p>
+  </form>
+</main>
+
+<footer>
+  Renwick Systems · Ohio · <a href="mailto:hello@renwicksystems.com">hello@renwicksystems.com</a> · <a href="/privacy.html">Privacy</a>
+</footer>
+</body>
+</html>
