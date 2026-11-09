@@ -24,7 +24,11 @@ marketing line, not a claim this document makes.
   U.S. citizens or permanent residents, 500 or fewer employees, and the PI primarily employed by the SBC (DoW 2027 SBIR BAA
   section 1.4; NSF 26-510 section IV). A solo founder meets these as either entity.
 
-**Owner's answer needed:** the entity under which the first proposal goes out.
+**RULED by the owner 2026-11-09: "The LLC now."** Project Legacy Family Counseling Center, LLC applies first (its SAM record,
+its EIN); Renwick Systems' own registrations follow its Ohio filing. Consequences for the checklist: every registration
+below is made under the LLC's name and UEI; the SBA Company Registry, DSIP firm and VetCert records are the LLC's; the OAI
+intake's Company Name is the LLC (Renwick Systems named in the notes as the AI-development line). When Renwick Systems
+becomes its own entity, SAM -> SBA registry -> DSIP are repeated for it, and an award already in flight stays with the LLC.
 
 ---
 
@@ -132,13 +136,12 @@ The form at oai.org/form/fast-intake-form, read 2026-11-09. The owner enters the
 **Contact Information**
 - First / Last: Renwick Davis
 - Email / Phone: [his business email and phone]
-- Company Name: Renwick Systems (or the LLC, per section 0)
+- Company Name: Project Legacy Family Counseling Center, LLC (the owner's ruling, section 0; Renwick Systems named in the notes)
 - Job Title/Role: Founder/CEO
 
 **Company Profile**
 - Headquartered in Ohio: Yes
-- How long in business: Less than 1 Year (Renwick Systems, named 2026-10-19; site live since 2026-10-19) - or "1-3 Years" if
-  applying as the LLC
+- How long in business: the LLC's age (1-3 Years if formed in 2024 or 2025; the owner knows the filing date)
 - Number of Employees: 1 (Solo Founder)
 - Industry/Technology Area: Artificial Intelligence & Machine Learning
 
@@ -159,7 +162,7 @@ The form at oai.org/form/fast-intake-form, read 2026-11-09. The owner enters the
 - Would you like a FAST/OAI advisor to contact you: Yes
 
 **Follow-up Notes** (draft, his words to edit):
-> Renwick Systems builds AI applications whose numbers are computed by symbolic engines that cannot invent a value; a
+> Renwick Systems, the AI-development line of Project Legacy Family Counseling Center, LLC, builds AI applications whose numbers are computed by symbolic engines that cannot invent a value; a
 > fine-tuned language model only puts the computed result into words, and every numeric value is recomputed by an
 > independent verifier before it is served. The method is proven in Project Legacy, two apps live on the App Store and
 > Google Play, built end to end by the founder (M.S. Computer Science; 82nd Airborne veteran; former DoD). We are
@@ -274,7 +277,7 @@ as new.
 
 | When | What | Whose hand |
 |---|---|---|
-| This week | Decide the entity (section 0). Confirm SAM active/Public. Create sbir.gov account and SBA Company Registry (identity verification cannot be expedited). Login.gov + DSIP account + firm forms. OAI FAST intake + OFRN contact form (STTR partner ask). | Owner (all of it); I draft and read back. |
+| This week | Entity RULED: the LLC (section 0). Confirm the LLC's SAM active/Public. Create sbir.gov account and SBA Company Registry (identity verification cannot be expedited). Login.gov + DSIP account + firm forms. OAI FAST intake + OFRN contact form (STTR partner ask). | Owner (all of it); I draft and read back. |
 | Nov 10 | JumpStart Winter 2027 Software Accelerator closes (optional). | Owner |
 | Nov 2026 | VetCert application at certifications.sba.gov (parallel; does not gate SBIR). Read the DON27TZ02-NV012 Q&A on DSIP during pre-release; identify the Ohio research institution and co-PI. | Owner; I draft the questions. |
 | Dec 02, 2026 | Release 2 opens: Navy STTR DON27TZ02-NV012 (best fit); DARPA HYPER-CAP (method fit). Read the Navy STTR component instructions for the Phase I ceiling and page limit. | |
