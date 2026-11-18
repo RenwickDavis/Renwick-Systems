@@ -135,6 +135,9 @@ SBIR. The SBA FAST program (state SBIR assistance) FY26 closed July 2026; its Oh
 | **CincyTech** (Cincinnati) | Seed investment ("We invest in innovative founders"; a $34.5M fund announced July 1, 2026 for life sciences); "Only applicants from Ohio will be considered." Equity, not a grant; Southwest Ohio focus. Lower priority for a Canton software business. | cincytechusa.com/pitch-us "CincyTech Pitch Application" (description, deck, stage, vertical, HQ, address). | cincytechusa.com |
 | Ohio Third Frontier TVSF | Funds university technology validation (institutional match); not for a company without a university-owned technology. Not pursued. | | development.ohio.gov notices (figures conflict across sources) |
 
+**State 2026-11-18:** the owner SUBMITTED the OAI FAST intake and the OFRN contact form. Both ask for an Ohio
+research-institution partner for DON27TZ02-NV012. Replies arrive by email.
+
 Recommended order: OAI FAST intake (this week) -> OFRN contact form the same day (ask both for the STTR partner) -> Kent
 State Stark SBDC call (entity + VetCert paperwork) -> JumpStart 1-on-1 (the Nov 10 Software Accelerator deadline is the
 owner's call tonight; the advisor form has no deadline).
