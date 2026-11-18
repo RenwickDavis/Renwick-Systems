@@ -80,10 +80,10 @@ owner's hand; none of it goes in this file or to Claude.
       "governing documents", the EIN letter and the trade name certificate are the answer; say so in the comment box.
 
 **Control (the veteran runs day-to-day operations and long-term decisions)**
-- [ ] A resume (one or two pages) showing the management and technical experience to run the business: Master's in Information
-      Technology (Cleveland State University, 2022), the DFAS GS-2210-12 position, U.S. Army service, the build and operation
-      of Project Legacy. Corrected 2026-11-18 from his 2023 resume: the master's is in Information Technology, not Computer
-      Science.
+- [ ] A resume (one or two pages) showing the management and technical experience to run the business: Master's in Computer
+      Information Science (Cleveland State University, 2022), the DFAS GS-2210-12 position, U.S. Army service, the build and operation
+      of Project Legacy. Corrected 2026-11-18 on his word: the master's is in Computer Information Science (his 2023 resume read
+      Information Technology; the transcript governs).
 - [ ] Any licenses or permits the business holds (none expected for software; answer "none" if asked).
 - [ ] Bank account in his name, or "dba Renwick Systems", with him as the sole signer (a statement page if asked).
 
@@ -224,7 +224,7 @@ The form at oai.org/form/fast-intake-form, read 2026-11-09. The owner enters the
 > Renwick Systems, the AI-development line of Project Legacy Family Counseling Center, LLC, builds AI applications whose numbers are computed by symbolic engines that cannot invent a value; a
 > fine-tuned language model only puts the computed result into words, and every numeric value is recomputed by an
 > independent verifier before it is served. The method is proven in Project Legacy, two apps live on the App Store and
-> Google Play, built end to end by the founder (Master's in Information Technology; U.S. Army veteran; DoD IT specialist at DFAS). We are
+> Google Play, built end to end by the founder (Master's in Computer Information Science; U.S. Army veteran; DoD IT specialist at DFAS). We are
 > evaluating Navy STTR topic DON27TZ02-NV012 (explainable, hallucination-reducing mission-specialized LLMs; Release 2,
 > opens Dec 2, 2026) and need an Ohio research-institution partner for the STTR 30% share, a proposal review, and help
 > with the SBA Company Registry / DSIP / VetCert sequence. SAM.gov is registered. No other organization is engaged yet.
@@ -325,7 +325,7 @@ as new.
 - Commercialization: the Renwick Systems packages (docs/SAAS_OFFER_PACKAGES_2026-10-19.md in Project_Legacy_Core) and the
   topic's own Phase III paragraph ("enterprise workforce training, knowledge management ... healthcare, finance, legal, and
   critical infrastructure").
-- Key Personnel: the founder (Master's in Information Technology, Cleveland State University, 2022; B.S. Computer Information
+- Key Personnel: the founder (Master's in Computer Information Science, Cleveland State University, 2022; B.S. Computer Information
   Science, CSU, 2013; U.S. Army veteran; IT Specialist GS-2210-12 at DFAS) - the
   resume written 2026-09-13 (OneDrive\Documents, "2026 - Neurosymbolic AI").
 - Cost Volume: the Component's Phase I ceiling once the Navy STTR 27.B instructions are read (Release 2 pre-release Nov 04;
