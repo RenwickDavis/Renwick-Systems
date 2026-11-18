@@ -24,7 +24,14 @@ marketing line, not a claim this document makes.
   U.S. citizens or permanent residents, 500 or fewer employees, and the PI primarily employed by the SBC (DoW 2027 SBIR BAA
   section 1.4; NSF 26-510 section IV). A solo founder meets these as either entity.
 
-**RULED by the owner 2026-11-09: "The LLC now."** Project Legacy Family Counseling Center, LLC applies first (its SAM record,
+**SUPERSEDED 2026-11-18 by the owner: the entity is registered UNDER HIS OWN NAME (a sole proprietorship) to procure
+the UEI.** SBIR/STTR (13 CFR 121.702) and VetCert both accept a sole proprietorship. Register with an EIN, not the SSN, and make
+the name match the IRS letter exactly. The goal on SAM's first screen is "Directly with the U.S. federal government" and
+"Bid on a federal procurement opportunity as a prime contractor", which is the full registration covering contracts and grants.
+An award goes to him personally, not to the LLC. The earlier LLC submission (FSD incident INC-GSAFSD21875795) is his to let
+lapse or close. Every checklist row below now reads "under his name" in place of "the LLC".
+
+~~RULED by the owner 2026-11-09: "The LLC now."~~ Project Legacy Family Counseling Center, LLC applies first (its SAM record,
 its EIN); Renwick Systems' own registrations follow its Ohio filing. Consequences for the checklist: every registration
 below is made under the LLC's name and UEI; the SBA Company Registry, DSIP firm and VetCert records are the LLC's; the OAI
 intake's Company Name is the LLC (Renwick Systems named in the notes as the AI-development line). When Renwick Systems
