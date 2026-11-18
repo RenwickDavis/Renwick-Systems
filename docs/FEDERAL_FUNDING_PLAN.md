@@ -33,7 +33,8 @@ lapse or close. Every checklist row below now reads "under his name" in place of
 
 **2026-11-18: the Ohio TRADE NAME "Renwick Systems" was FILED** by the owner through Ohio Business Central (trade name
 registration, about $39). The registrant is the owner as an individual, and the date of first use is 10/19/2026. He keeps the
-certificate PDF once Ohio approves. An LLC for Renwick Systems was deferred on his word: it means a new EIN and a new SAM
+certificate PDF once Ohio approves. **APPROVED 2026-11-18:** the Secretary of State certified the registration the same day
+(registration no. 5719029, effective 11/18/2026; the certificate PDF is in his files). An LLC for Renwick Systems was deferred on his word: it means a new EIN and a new SAM
 registration, so it waits until an award or a client makes the liability shield worth that.
 
 ~~RULED by the owner 2026-11-09: "The LLC now."~~ Project Legacy Family Counseling Center, LLC applies first (its SAM record,
@@ -75,7 +76,8 @@ owner's hand; none of it goes in this file or to Claude.
 **Identity and ownership (sole proprietor: 100% his, which is "unconditional" ownership by definition)**
 - [ ] Government photo ID (driver's license or passport).
 - [ ] IRS EIN confirmation letter (CP 575) in his name.
-- [ ] Ohio trade name certificate for "Renwick Systems", once Ohio approves it (it shows his name as the registrant).
+- [x] Ohio trade name certificate for "Renwick Systems": issued 2026-11-18, registration no. 5719029 (his name as the
+      registrant). He has the PDF.
 - [ ] No partnership, operating agreement or stock records: none exist for a sole proprietorship. If the portal asks for
       "governing documents", the EIN letter and the trade name certificate are the answer; say so in the comment box.
 
