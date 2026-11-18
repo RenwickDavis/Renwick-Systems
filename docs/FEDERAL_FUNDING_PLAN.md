@@ -31,6 +31,11 @@ the name match the IRS letter exactly. The goal on SAM's first screen is "Direct
 An award goes to him personally, not to the LLC. The earlier LLC submission (FSD incident INC-GSAFSD21875795) is his to let
 lapse or close. Every checklist row below now reads "under his name" in place of "the LLC".
 
+**2026-11-18: the Ohio TRADE NAME "Renwick Systems" was FILED** by the owner through Ohio Business Central (trade name
+registration, about $39). The registrant is the owner as an individual, and the date of first use is 10/19/2026. He keeps the
+certificate PDF once Ohio approves. An LLC for Renwick Systems was deferred on his word: it means a new EIN and a new SAM
+registration, so it waits until an award or a client makes the liability shield worth that.
+
 ~~RULED by the owner 2026-11-09: "The LLC now."~~ Project Legacy Family Counseling Center, LLC applies first (its SAM record,
 its EIN); Renwick Systems' own registrations follow its Ohio filing. Consequences for the checklist: every registration
 below is made under the LLC's name and UEI; the SBA Company Registry, DSIP firm and VetCert records are the LLC's; the OAI
