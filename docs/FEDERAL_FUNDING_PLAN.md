@@ -55,6 +55,48 @@ becomes its own entity, SAM -> SBA registry -> DSIP are repeated for it, and an 
 | 5 | **SBA VetCert** (VOSB; SDVOSB only with a VA disability rating) | NOT DONE (on the 10-20 pick-up list, not started). | sba.gov veteran contracting assistance page: 51% owned and controlled by one or more veterans; small under a NAICS code in the SAM profile; apply at certifications.sba.gov ("Sign Up / Login" then "Get Certified!"); contacts certifications@sba.gov, 866-SBA-HELP. The SBA page states NO processing time; third-party figures range 12 to 90 days and are not relied on. | DD-214 (veteran status), ownership and control documents (operating agreement, EIN letter), the SAM record. If a VA disability rating exists, SDVOSB (sole-source and set-aside eligibility) instead of VOSB. | Weeks to months; it does not gate SBIR/STTR, it gates set-asides and VA Vets First. Start in parallel. |
 | 6 | **Login.gov** | Unknown. | DoW BAA 2.3 | One account for DSIP (and usable for SAM). | Minutes. |
 
+### 1.1 VetCert document checklist (drafted 2026-11-18, for a sole proprietorship)
+
+This draft is built from the eligibility rules (13 CFR Part 128, the SBA VetCert page) and the usual SBA asks. **The authority
+is the checklist the portal itself shows** (certifications.sba.gov offers "checklists and pre-application guides"). Read that
+before uploading anything, and add what it asks for that this list does not have. Everything uploads in the portal, by the
+owner's hand; none of it goes in this file or to Claude.
+
+**Prerequisites (the portal checks these before anything else)**
+- [ ] SAM registration **Active** and **Public**, with a NAICS code you are small under (541511 / 541512 / 541715).
+- [ ] An SBA Certifications account (the "Sign Up / Login" at certifications.sba.gov), using the same Login.gov identity.
+
+**Veteran status (required)**
+- [ ] DD-214, **Member-4 copy** (the one that shows the character of service). If he does not have it, request it from the
+      National Archives (eVetRecs at archives.gov/veterans) now, because that takes weeks.
+- [ ] For SDVOSB only: the VA disability rating letter (any rating, 0% or above, establishes service connection). Without one,
+      he applies as a VOSB.
+
+**Identity and ownership (sole proprietor: 100% his, which is "unconditional" ownership by definition)**
+- [ ] Government photo ID (driver's license or passport).
+- [ ] IRS EIN confirmation letter (CP 575) in his name.
+- [ ] Ohio trade name certificate for "Renwick Systems", once Ohio approves it (it shows his name as the registrant).
+- [ ] No partnership, operating agreement or stock records: none exist for a sole proprietorship. If the portal asks for
+      "governing documents", the EIN letter and the trade name certificate are the answer; say so in the comment box.
+
+**Control (the veteran runs day-to-day operations and long-term decisions)**
+- [ ] A resume (one or two pages) showing the management and technical experience to run the business: M.S. Computer Science,
+      the DoD position, the 82nd Airborne service, the build and operation of Project Legacy.
+- [ ] Any licenses or permits the business holds (none expected for software; answer "none" if asked).
+- [ ] Bank account in his name, or "dba Renwick Systems", with him as the sole signer (a statement page if asked).
+
+**Size and financial (commonly requested; amounts small or zero for a new business)**
+- [ ] The most recent federal tax return (Form 1040 with Schedule C for the sole proprietorship), if one has been filed. A
+      business started in 2026 has none yet; say so.
+- [ ] A current balance sheet and profit-and-loss statement if asked (QuickBooks can produce both).
+
+**Possibly asked (have them ready)**
+- [ ] Proof of the business address (a utility bill or lease), matching SAM.
+- [ ] A short statement of who else, if anyone, works in or advises the business (none: he is a solo founder).
+
+**Time:** SBA publishes no processing time. The third-party figures (12 to 90 days) are unverified. VetCert does not gate
+SBIR/STTR (that eligibility needs no certification), so it runs in parallel and must not hold up the January 6 deadline.
+
 Order: 0 (entity) -> 1 confirm SAM -> 2 SBA registry + 6 Login.gov + 3 DSIP (parallel) -> 5 VetCert (parallel) -> 4
 Research.gov only if an NSF pitch is written.
 
