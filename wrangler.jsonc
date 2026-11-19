@@ -1,12 +1,24 @@
 // Renwick Systems - the site as a Cloudflare Worker serving static assets (the dashboard project "renwick-systems",
 // Git-connected to this repository, production branch dev, deploy command `npx wrangler deploy`, root /).
 // No build step: the two pages in public/ are the whole site. 2026-10-19.
+// 2026-11-19: src/worker.js answers POST /api/start (the form) and emails it through Email Routing; it runs first only
+// for /api/*, so every page is still served straight from public/.
 {
   "name": "renwick-systems",
   "compatibility_date": "2026-10-19",
+  "main": "src/worker.js",
   "assets": {
     "directory": "./public",
+    "binding": "ASSETS",
     "not_found_handling": "404-page",
-    "html_handling": "auto-trailing-slash"
+    "html_handling": "auto-trailing-slash",
+    "run_worker_first": ["/api/*"]
+  },
+  // The form's mail goes only to the Email Routing destination already verified on the .com zone (README, Deploy).
+  "send_email": [
+    { "name": "START_MAIL", "destination_address": "renwickdavis.rd@gmail.com" }
+  ],
+  "vars": {
+    "START_TO": "renwickdavis.rd@gmail.com"
   }
 }

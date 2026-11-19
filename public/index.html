@@ -74,12 +74,13 @@
   <p class="muted">Project Legacy is the founder's own product; it is the first case study, and the method it was built with is what Renwick Systems sells.</p>
 
   <h2>Who builds it</h2>
-  <p>Renwick Davis, M.S. Computer Science. Formerly with the Department of Defense; a veteran of the 82nd Airborne Division. Renwick Systems is a veteran-owned business in Ohio.</p>
+  <p>Renwick Davis, M.S. Computer Information Science. Formerly with the Department of Defense; a veteran of the 82nd Airborne Division. Renwick Systems is a veteran-owned business in Ohio.</p>
 
   <h2 id="start">Start with a Discovery week</h2>
   <p class="muted">Tell us what you need to be right. We reply within one working day.</p>
-  <!-- The form posts to HubSpot (the free CRM): create the form in HubSpot (Marketing > Forms) with these five fields and paste its embed code here in place of this form, or keep this form and point its action at the HubSpot Forms endpoint for that form. See README.md. -->
-  <form id="start-form" method="post" action="#" onsubmit="return false;">
+  <!-- The form posts to /api/start (src/worker.js), which emails it to the owner through Cloudflare Email Routing. -->
+  <form id="start-form" method="post" action="/api/start">
+    <div aria-hidden="true" style="position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden"><label>Leave this empty <input name="website" tabindex="-1" autocomplete="off"></label></div>
     <label>Your name <input name="firstname" autocomplete="name" required></label>
     <label>Business <input name="company" autocomplete="organization" required></label>
     <label>Work email <input name="email" type="email" autocomplete="email" required></label>
@@ -93,12 +94,49 @@
       </select>
     </label>
     <button type="submit">Send</button>
-    <p class="muted" style="font-size:13px">We keep what you send in our CRM to reply to you and for nothing else. No advertising trackers on this site. <a href="/privacy">Privacy</a>.</p>
+    <p id="start-status" role="status" aria-live="polite" style="margin:0"></p>
+    <p class="muted" style="font-size:13px">What you send comes to us by email, to reply to you and for nothing else. No advertising trackers on this site. <a href="/privacy">Privacy</a>.</p>
   </form>
 </main>
 
 <footer>
-  Renwick Systems · Ohio · <a href="mailto:hello@renwicksystems.com">hello@renwicksystems.com</a> · <a href="/privacy">Privacy</a>
+  Renwick Systems · Ohio · <a class="mail" href="mailto:hello@renwicksystems.com">hello@renwicksystems.com</a> · <a href="/privacy">Privacy</a>
+  <span class="mail-note" role="status" aria-live="polite"></span>
 </footer>
+<script>
+  // The form: send it without leaving the page, and say plainly whether it went.
+  (function () {
+    var form = document.getElementById("start-form");
+    var status = document.getElementById("start-status");
+    var button = form.querySelector("button[type=submit]");
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      button.disabled = true;
+      status.textContent = "Sending...";
+      fetch(form.action, { method: "POST", body: new FormData(form) })
+        .then(function (r) { return r.json().catch(function () { return { ok: false }; }); })
+        .then(function (res) {
+          if (res.ok) {
+            form.reset();
+            status.textContent = "Thank you. Your message is on its way, and we reply within one working day.";
+          } else {
+            status.textContent = res.error || "Your message could not be sent. Please email hello@renwicksystems.com.";
+          }
+        })
+        .catch(function () { status.textContent = "Your message could not be sent. Please email hello@renwicksystems.com."; })
+        .then(function () { button.disabled = false; });
+    });
+  })();
+  // An email link opens the visitor's mail app; where none is set up, nothing visible happens. Copy the address too.
+  document.querySelectorAll("a.mail").forEach(function (a) {
+    a.addEventListener("click", function () {
+      var address = a.getAttribute("href").replace("mailto:", "");
+      var note = a.parentNode.querySelector(".mail-note");
+      if (navigator.clipboard && note) {
+        navigator.clipboard.writeText(address).then(function () { note.textContent = " (address copied)"; }, function () {});
+      }
+    });
+  });
+</script>
 </body>
 </html>

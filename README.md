@@ -19,14 +19,14 @@ renwicksystems.com": all requests -> `concat("https://renwicksystems.com", http.
 Web Analytics on `renwicksystems.com` with automatic setup (no script tag); Email Routing on the .com zone (Cloudflare's three
 MX + the SPF TXT, destination renwickdavis.rd@gmail.com verified, rule hello@renwicksystems.com -> that mailbox).
 
-## The form -> HubSpot (free CRM, portal 247736001)
-HubSpot -> Marketing -> Forms -> Create -> Embedded form, named "Renwick Systems - start". Five fields, in this order, mapped to
-these properties: First name (`firstname`), Company name (`company`), Email (`email`), Message (`message`, single-line or
-multi-line text), and a drop-down mapped to a CONTACT property `offer` (create it with the same five values as the DEAL
-property `offer`: discovery_week, prototype, pilot_60_days, operate - plus facility_pilot). Then either paste HubSpot's embed
-code in place of the `<form>` in `index.html`, or keep the page's form and post it to the Forms API endpoint HubSpot shows
-for that form. Every submission is a CONTACT; Monday's `/pipeline` turns each new contact into a Lead deal with `offer` set
-(the intake step), and the follow-up is DRAFTED, never sent.
+## The form -> email (Cloudflare Email Routing, 2026-11-19)
+`public/index.html` posts the form to `/api/start`. `src/worker.js` (the Worker's `main`, run first only for `/api/*`;
+everything else is the static site) checks the five fields and a hidden spam trap, then sends one plain-text email
+through the `send_email` binding `START_MAIL` to the Email Routing destination already verified on the .com zone
+(`wrangler.jsonc`: the binding is locked to that address and `START_TO` names it). From: form@renwicksystems.com;
+Reply-To: the visitor, so answering the email answers them. The page says whether it went. HubSpot is no longer in the
+path; the Monday `/pipeline` intake now starts from these emails. Email links on both pages also copy the address,
+because a mailto link does nothing on a machine with no mail app set up.
 
 ## Google Search, when the page is live (a small budget; the owner's account)
 One campaign, exact and phrase match, Ohio and neighbouring states first, landing on this page:
