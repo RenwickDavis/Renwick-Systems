@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080e15">
+  <title>Project Legacy | Neuro-Symbolic AI Case Study</title>
+  <meta name="description" content="How Renwick Systems built Project Legacy in 16 weeks and independently verified the calculations behind its language model’s explanations.">
+  <link rel="canonical" href="https://renwicksystems.com/work/project-legacy">
+  <link rel="stylesheet" href="/landing.css">
+  <script src="/landing.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="/" aria-label="Renwick Systems home">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <span>Renwick<span class="brand-accent"> Systems</span></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>Menu <span aria-hidden="true"></span></button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="/#how">Architecture</a>
+        <a href="/#work">Our work</a>
+        <a href="/#packages">Engagements</a>
+        <a class="button button-outline nav-cta" href="/#start">Start a project</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="page-intro case-section" aria-labelledby="page-title">
+      <div class="shell section case-layout">
+        <div>
+          <p class="eyebrow">Neuro-symbolic AI case study</p>
+          <h1 id="page-title">Project Legacy</h1>
+          <p class="page-lead">Renwick Davis built and shipped a family app and its companion staff app in 16 weeks. Both needed a way to explain results from household records while keeping the underlying calculations reproducible.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="/#start?offer=discovery_week">Book a Discovery week</a>
+          </div>
+        </div>
+        <dl class="case-metrics" aria-label="Project Legacy operating profile from the case study">
+          <div><dt>Monthly operating cost</dt><dd>~$500</dd></div>
+          <div><dt>Fine-tuned adapters on one GPU service</dt><dd>11</dd></div>
+          <div><dt>Operator, background worker, and queue</dt><dd>1 each</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section shell" aria-labelledby="verification-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">LLM output verification</p>
+          <h2 id="verification-title">Check the calculations before writing the explanation.</h2>
+        </div>
+        <p>The apps use structured inputs and published chart rules. A deterministic engine computes the chart. A separate implementation recomputes the checked values from the same source inputs without calling the production chart engine.</p>
+      </div>
+      <div class="architecture-demo">
+        <article class="stage">
+          <div>
+            <h3>Compute the chart.</h3>
+            <p>The engines use names, dates of birth, and an explicit target date to calculate the product’s name- and date-based chart values. They also derive timing cycles and measures for pairs of people.</p>
+          </div>
+          <dl class="trace">
+            <div><dt>Individual values</dt><dd>Life path, expression, birthday, and maturity numbers</dd></div>
+            <div><dt>Time-dependent values</dt><dd>Personal cycles, challenge numbers, and pinnacle values</dd></div>
+            <div><dt>Pairwise values</dt><dd>Resonance, dominant difference, and friction scores</dd></div>
+          </dl>
+        </article>
+        <article class="stage">
+          <div>
+            <h3>Recompute and compare.</h3>
+            <p>The independent verifier rebuilds the individual values from the published rules. It reconstructs the pairwise measures from individually verified inputs and checks timing outputs such as the forecast’s best and worst days. The verification path withholds disputed charts.</p>
+          </div>
+          <dl class="trace">
+            <div><dt>Inputs</dt><dd>Original records and target date</dd></div>
+            <div><dt>Check</dt><dd>Compare the chart with the independent recomputation</dd></div>
+            <div><dt>Disagreement</dt><dd>Withhold the result and report the mismatch</dd></div>
+          </dl>
+        </article>
+        <article class="stage">
+          <div>
+            <h3>Explain the checked result.</h3>
+            <p>A fine-tuned language model receives the computed chart and turns it into prose for the app. The verification described here covers numeric chart inputs to the model. Fidelity of the generated explanation is evaluated separately offline.</p>
+          </div>
+          <dl class="trace">
+            <div><dt>Grounding</dt><dd>Computed chart values</dd></div>
+            <div><dt>Model output</dt><dd>A plain-language explanation</dd></div>
+          </dl>
+        </article>
+      </div>
+    </section>
+
+    <section class="case-section" aria-labelledby="operations-title">
+      <div class="section shell">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Operations</p>
+            <h2 id="operations-title">One operator, around $500 a month.</h2>
+          </div>
+          <p>The case study’s operating profile used one scale-to-zero GPU service for 11 fine-tuned adapters, with one background worker and one queue.</p>
+        </div>
+        <div class="method-notes">
+          <div>
+            <h3>Daily service checks</h3>
+            <p>Review service health, errors, latency, queue status, and whether idle GPU capacity has scaled down.</p>
+          </div>
+          <div>
+            <h3>Weekly cost and reliability review</h3>
+            <p>Compare spend with the monthly budget, review service-level trends, and keep a public architecture record and blameless incident reports.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell page-cta" aria-labelledby="discovery-title">
+      <p class="eyebrow">Discovery week · $6,000 · five working days</p>
+      <h2 id="discovery-title">AI for business decisions that have to be right.</h2>
+      <p>Bring one workflow. We’ll map its records and rules, define how to verify the result, and scope a prototype.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="/#start?offer=discovery_week">Book a Discovery week</a>
+        <a class="button button-outline" href="/services/ai-workflow-automation">Explore workflow automation</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="shell site-footer">
+    <a class="brand" href="/" aria-label="Renwick Systems home">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span>Renwick<span class="brand-accent"> Systems</span></span>
+    </a>
+    <p>Veteran-owned · Ohio, USA</p>
+    <a href="/privacy">Privacy</a>
+  </footer>
+</body>
+</html>

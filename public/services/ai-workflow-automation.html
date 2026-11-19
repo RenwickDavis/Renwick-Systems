@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080e15">
+  <title>AI Workflow Automation with Business Rules | Renwick Systems</title>
+  <meta name="description" content="Custom AI development for business workflows. See how Renwick Systems applies your rules, handles exceptions, and independently verifies a result.">
+  <link rel="canonical" href="https://renwicksystems.com/services/ai-workflow-automation">
+  <link rel="stylesheet" href="/landing.css">
+  <script src="/landing.js" defer></script>
+  <script src="/invoice-demo.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="/" aria-label="Renwick Systems home">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <span>Renwick<span class="brand-accent"> Systems</span></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>Menu <span aria-hidden="true"></span></button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="/#how">Architecture</a>
+        <a href="/#work">Our work</a>
+        <a href="/#packages">Engagements</a>
+        <a class="button button-outline nav-cta" href="/#start">Start a project</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="page-intro case-section" aria-labelledby="page-title">
+      <div class="section shell">
+        <p class="eyebrow">Custom AI development for business workflows</p>
+        <h1 id="page-title">AI workflow automation with business rules.</h1>
+        <p class="page-lead">We build AI for business decisions that have to be right. The system interprets the request, applies your policy to your records, and shows how it reached the result.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="/#start?offer=discovery_week">Book a Discovery week</a>
+          <a class="button button-outline" href="#invoice-demo">Try the invoice walkthrough</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell" id="invoice-demo" aria-labelledby="invoice-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Illustrative workflow</p>
+          <h2 id="invoice-title">Is invoice #1042 ready to pay?</h2>
+        </div>
+        <p>The sample policy requires a manager’s approval for invoices over $1,000. Choose a scenario to see how the system reaches and checks its decision.</p>
+      </div>
+      <div class="architecture-demo" data-invoice-demo>
+        <div class="demo-header">
+          <label class="demo-scenario" hidden>
+            Invoice scenario
+            <select>
+              <option value="missing">Above threshold · approval missing</option>
+              <option value="approved">Above threshold · manager approved</option>
+              <option value="under">Below threshold · approval optional</option>
+            </select>
+          </label>
+        </div>
+        <div class="stage-selector" role="group" aria-label="Explore the workflow stages" hidden>
+          <button type="button" aria-controls="interpret" aria-pressed="true">Interpret</button>
+          <button type="button" aria-controls="compute" aria-pressed="false">Compute</button>
+          <button type="button" aria-controls="verify" aria-pressed="false">Verify</button>
+        </div>
+        <div class="stage-content" aria-live="polite">
+          <article class="stage" id="interpret">
+            <div>
+              <h3>Identify the request and its records.</h3>
+              <p>The model extracts the invoice number and the payment eligibility question. The system retrieves the invoice, its signed approval record if available, and the applicable payment policy.</p>
+            </div>
+            <dl class="trace">
+              <div><dt>Invoice</dt><dd>#1042</dd></div>
+              <div><dt>Intent</dt><dd>Check payment eligibility</dd></div>
+              <div><dt>Recorded total</dt><dd data-invoice-value="total">$1,240.00</dd></div>
+              <div><dt>Approval record</dt><dd data-invoice-value="approval">No manager approval on file</dd></div>
+            </dl>
+          </article>
+          <article class="stage" id="compute">
+            <div>
+              <h3>Apply the rule and handle the exception.</h3>
+              <p>Amounts over $1,000 put payment on hold unless manager approval is recorded. Amounts at or below $1,000 pass this rule without an approval record.</p>
+            </div>
+            <dl class="trace">
+              <div><dt>Total vs. threshold</dt><dd data-invoice-value="comparison">$1,240.00 &gt; $1,000.00</dd></div>
+              <div><dt>Approval check</dt><dd data-invoice-value="approvalCheck">Required and missing</dd></div>
+              <div><dt>Decision</dt><dd data-invoice-value="decision">Hold payment</dd></div>
+            </dl>
+          </article>
+          <article class="stage" id="verify">
+            <div>
+              <h3>Recompute from the source records.</h3>
+              <p>A separate check sums the line items, looks up the approval independently of the first decision, and reapplies the policy. A mismatch blocks the decision. When the results agree, the model can explain the verified outcome.</p>
+            </div>
+            <dl class="trace">
+              <div><dt>Line items</dt><dd data-invoice-value="lineItems">$940.00 + $300.00</dd></div>
+              <div><dt>Recomputed total</dt><dd data-invoice-value="verifiedTotal">$1,240.00</dd></div>
+              <div><dt>Verified decision</dt><dd data-invoice-value="verifiedDecision">Hold payment</dd></div>
+              <div><dt>Explanation</dt><dd data-invoice-value="explanation">Manager approval is required for $1,240.00.</dd></div>
+            </dl>
+          </article>
+        </div>
+      </div>
+      <div class="method-notes">
+        <div>
+          <h3>When approval is missing</h3>
+          <p>The $1,240.00 invoice stays on hold and can be routed to a manager. Once a valid approval is on file, the same amount is eligible for release.</p>
+        </div>
+        <div>
+          <h3>When the total is below the threshold</h3>
+          <p>A $960.00 invoice is eligible for release without manager approval under this policy. In all three cases, the walkthrough evaluates eligibility only.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section" aria-labelledby="custom-title">
+      <div class="section shell">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Custom development</p>
+            <h2 id="custom-title">Build around the rules you already use.</h2>
+          </div>
+          <p>Packaged invoice software can fit a standard approval flow and is bounded by the rules and records it supports. A custom workflow can apply your approval matrix, check records across your existing systems, and route exceptions to the person who owns the decision.</p>
+        </div>
+        <div class="method-notes">
+          <div>
+            <h3>Document the decision.</h3>
+            <p>Identify the authoritative records, who can approve, which thresholds apply, and what happens when data is missing.</p>
+          </div>
+          <div>
+            <h3>Test the rule with real cases.</h3>
+            <p>Turn the policy into executable checks and agree on what a correct result looks like before connecting a workflow to downstream actions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell page-cta" aria-labelledby="discovery-title">
+      <p class="eyebrow">Discovery week · $6,000 · five working days</p>
+      <h2 id="discovery-title">Bring one decision you need to get right.</h2>
+      <p>We’ll map the workflow, define the verification checks, and scope a fixed-price prototype.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="/#start?offer=discovery_week">Book a Discovery week</a>
+        <a class="button button-outline" href="/work/project-legacy">Read the Project Legacy case study</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="shell site-footer">
+    <a class="brand" href="/" aria-label="Renwick Systems home">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span>Renwick<span class="brand-accent"> Systems</span></span>
+    </a>
+    <p>Veteran-owned · Ohio, USA</p>
+    <a href="/privacy">Privacy</a>
+  </footer>
+</body>
+</html>

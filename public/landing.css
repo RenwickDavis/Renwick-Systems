@@ -207,10 +207,14 @@ h1 em { color: var(--accent); font-style: normal; }
 .section-heading > p { max-width: 29rem; color: var(--muted); }
 .section h2 { margin-top: .7rem; font-size: clamp(2.6rem, 5.1vw, 4.9rem); font-weight: 630; letter-spacing: -.065em; }
 .section h3 { font-size: 1.24rem; letter-spacing: -.025em; }
+.section-link { display: inline-block; margin-top: 1.15rem; color: var(--accent); text-underline-offset: .2em; }
 
 .architecture-demo { overflow: hidden; border: 1px solid var(--line); border-radius: .75rem; background: var(--surface); }
 .demo-header { display: flex; flex-wrap: wrap; align-items: baseline; gap: .45rem 1rem; padding: 1.25rem clamp(1rem, 3vw, 2rem); border-bottom: 1px solid var(--line); }
 .demo-header > p:last-child { color: var(--ink); font-weight: 600; }
+.demo-header:has(.demo-scenario[hidden]) { display: none; }
+.demo-scenario { display: flex; flex-wrap: wrap; align-items: center; gap: .45rem 1rem; color: var(--ink); font-weight: 600; }
+.demo-scenario select { min-width: 0; max-width: 100%; min-height: 2.75rem; padding: .45rem .65rem; border: 1px solid #3a535c; border-radius: .35rem; background: var(--background); color: var(--ink); font-weight: 400; }
 .stage-selector { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-bottom: 1px solid var(--line); }
 .stage-selector button {
   min-height: 3.2rem;
@@ -259,6 +263,12 @@ h1 em { color: var(--accent); font-style: normal; }
 .case-metrics > div + div { border-top: 1px solid var(--line); }
 .case-metrics dt { color: var(--muted); grid-column: 2; grid-row: 1; }
 .case-metrics dd { color: var(--accent); grid-column: 1; grid-row: 1; font-weight: 650; font-size: clamp(1.8rem, 3.4vw, 3.2rem); line-height: 1.1; letter-spacing: -.06em; }
+
+.page-intro { background: radial-gradient(ellipse at 85% 15%, #132b2d, transparent 64%), #0b141d; }
+.page-intro h1 { max-width: 18ch; margin-top: .7rem; }
+.page-lead, .page-cta > p:not(.eyebrow) { max-width: 40rem; margin-top: 1.2rem; color: var(--muted); font-size: 1.1rem; }
+.page-cta h2 { max-width: 21ch; }
+.page-cta .hero-actions { margin-top: 1.35rem; }
 
 .offers { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
 .offer { display: flex; flex-direction: column; align-items: flex-start; padding: clamp(1rem, 1.7vw, 1.5rem); border: 1px solid var(--line); border-radius: .65rem; background: var(--surface); }
