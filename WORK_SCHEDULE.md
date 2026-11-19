@@ -2,9 +2,10 @@
 
 ## Active State
 
-- **As of** 2026-11-19 ET. Branch `dev`, based on `6178194`. The local milestone is the commit containing this entry.
+- **As of** 2026-11-19 ET. Branch `dev`. The site changes from `3c4b1f0` are live on `renwicksystems.com`. This commit records the organic launch materials.
 - **Completed** Project Legacy case study, AI workflow automation service page, homepage and Discovery week links, canonical URLs, sitemap, and robots directive.
-- **Verification** 24 of 24 checks passed (6 HTTP/SEO, 9 browser, 3 link/API, 3 invoice edge cases, 3 JavaScript syntax). Wrangler dry build passed. The link audit covered 17 distinct targets.
-- **Live routes at audit** `/` and `/privacy` returned 200. Cloudflare served `/robots.txt` without a sitemap directive. The case study, service page, and `/sitemap.xml` returned 404.
-- **Open hold** Production deployment. Both new pages, the sitemap, and the updated robots directive were verified on local Wrangler.
-- **Next decision** Approve a push to `origin/dev`. After deployment, check the live routes and robots directive, submit `/sitemap.xml` in Google Search Console, and inspect both new page URLs.
+- **Approved and committed** The LinkedIn launch post, ERP integrator and fractional CFO referral messages, and monthly Search Console review template are in `docs/traffic/`.
+- **Verification** 24 of 24 local checks and the Wrangler dry build passed. All six production endpoint checks passed with `curl`. The four HTML titles and self-canonical URLs matched, the sitemap parsed as UTF-8 XML with those four URLs, and Cloudflare's live robots response included the sitemap directive.
+- **Live routes** HTTP 200 for `/`, `/work/project-legacy`, `/services/ai-workflow-automation`, `/privacy`, `/sitemap.xml`, and `/robots.txt`.
+- **Open holds** LinkedIn posting and referral outreach await separate authorization. Google Search Console submission and URL Inspection are pending.
+- **Next step** Submit `https://renwicksystems.com/sitemap.xml` in Google Search Console, then inspect both new page URLs and request indexing.
