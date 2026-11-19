@@ -1,142 +1,231 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Renwick Systems</title>
-<meta name="description" content="AI applications that are right about your numbers, cost a few hundred dollars a month to run, and one person can operate. Renwick Systems, Ohio.">
-<link rel="canonical" href="https://renwicksystems.com/">
-<style>
-  :root { --bg:#fbfaf7; --fg:#1b1f23; --muted:#5b6470; --line:#e3e0d8; --accent:#0f6e6a; --accent-ink:#ffffff; --card:#ffffff; }
-  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#121417; --fg:#ecebe6; --muted:#a3aab3; --line:#2a2f36; --accent:#4cc1b9; --accent-ink:#0d1b1a; --card:#1a1e23; } }
-  :root[data-theme="dark"] { --bg:#121417; --fg:#ecebe6; --muted:#a3aab3; --line:#2a2f36; --accent:#4cc1b9; --accent-ink:#0d1b1a; --card:#1a1e23; }
-  * { box-sizing:border-box; }
-  body { margin:0; background:var(--bg); color:var(--fg); font:17px/1.55 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-  main, header, footer { max-width:860px; margin:0 auto; padding:0 16px; }
-  header { padding-top:28px; display:flex; justify-content:space-between; align-items:baseline; }
-  .brand { font-weight:700; letter-spacing:.02em; text-decoration:none; color:var(--fg); }
-  nav a { color:var(--muted); text-decoration:none; margin-left:18px; font-size:15px; }
-  h1 { font-size:clamp(30px, 5vw, 44px); line-height:1.15; margin:48px 0 16px; letter-spacing:-.01em; }
-  h2 { font-size:clamp(22px, 3vw, 28px); margin:56px 0 12px; }
-  h3 { font-size:19px; margin:0 0 6px; }
-  p { margin:0 0 14px; }
-  .lead { font-size:20px; color:var(--muted); max-width:640px; }
-  .cta { display:inline-block; background:var(--accent); color:var(--accent-ink); padding:12px 20px; border-radius:8px; text-decoration:none; font-weight:600; margin-top:10px; }
-  .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:16px; margin-top:16px; }
-  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:18px; }
-  .price { color:var(--accent); font-weight:700; }
-  .muted { color:var(--muted); }
-  ul { padding-left:20px; } li { margin-bottom:6px; }
-  form { display:grid; gap:12px; max-width:520px; }
-  label { font-size:14px; color:var(--muted); display:grid; gap:4px; }
-  input, select, textarea { font:inherit; padding:10px 12px; border:1px solid var(--line); border-radius:8px; background:var(--card); color:var(--fg); width:100%; }
-  button { font:inherit; font-weight:600; background:var(--accent); color:var(--accent-ink); border:0; border-radius:8px; padding:12px 18px; cursor:pointer; }
-  footer { border-top:1px solid var(--line); margin-top:64px; padding:24px 16px 40px; font-size:14px; color:var(--muted); }
-  footer a { color:var(--muted); }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080e15">
+  <title>Renwick Systems | Neuro-Symbolic AI Engineering</title>
+  <meta name="description" content="Renwick Systems builds custom neuro-symbolic AI systems that combine language models with business rules, deterministic computation, and independent verification.">
+  <link rel="canonical" href="https://renwicksystems.com/">
+  <link rel="stylesheet" href="./landing.css">
+  <script src="./landing.js" defer></script>
 </head>
-<body>
-<header>
-  <a class="brand" href="/">Renwick Systems</a>
-  <nav><a href="#how">How we build</a><a href="#packages">Packages</a><a href="#work">Our work</a><a href="#start">Start</a></nav>
-</header>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<main>
-  <h1>AI applications that are right about your numbers, cost a few hundred dollars a month to run, and one person can operate.</h1>
-  <p class="lead">Most AI projects fail on three fears: the model makes numbers up, the cloud bill runs away, and keeping it alive takes a team. We build the other kind.</p>
-  <a class="cta" href="#start">Book a Discovery week</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="/" aria-label="Renwick Systems home">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <span>Renwick<span class="brand-accent"> Systems</span></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>Menu <span aria-hidden="true"></span></button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="#how">Architecture</a>
+        <a href="#work">Our work</a>
+        <a href="#packages">Engagements</a>
+        <a class="button button-outline nav-cta" href="#start">Start a project</a>
+      </nav>
+    </div>
+  </header>
 
-  <h2 id="how">How we build</h2>
-  <div class="grid">
-    <div class="card"><h3>Your numbers are computed, never guessed</h3><p>Your rules and your figures are computed by engines that cannot invent a value. The language model only puts the result into words. When a value cannot be computed, the system says so instead of filling it in.</p></div>
-    <div class="card"><h3>Every rule is a check that fails</h3><p>A rule the system must keep is written as a test that breaks when the rule is broken, and the build does not ship past a broken one. Nothing lives only in a document.</p></div>
-    <div class="card"><h3>A few hundred dollars a month</h3><p>Scale-to-zero infrastructure that costs nothing while idle, one GPU service where a model is needed, and a weekly read of the bill against a budget you set.</p></div>
-    <div class="card"><h3>One person can operate it</h3><p>Daily and weekly routines read the system's health, its service levels and its spend, and post the record. We install them with the system and run them for you if you want.</p></div>
-  </div>
+  <main id="main" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="shell hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow hero-eyebrow">Neuro-symbolic AI engineering</p>
+          <h1 id="hero-title">AI that reasons.<br>Results you<br class="hero-break"> <em>can verify.</em></h1>
+          <p class="hero-lead">We build custom AI systems that understand language, apply your business rules, and show how they got the answer.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#start" data-offer="discovery_week">Book a Discovery week</a>
+            <a class="button button-outline" href="#how">Explore the architecture</a>
+          </div>
+        </div>
 
-  <h2 id="packages">Four packages, fixed prices</h2>
-  <p class="muted">Every package is a fixed scope at a fixed price. We never bill by the hour. Half of any build is due on signing; a scope change is a new quote.</p>
-  <div class="grid">
-    <div class="card"><h3>Discovery week</h3><p class="price">$6,000 · five working days</p><p>Your rules written down as rules. Where your numbers live and who owns them. What "right" means for your business, in a sentence you sign. A build plan with a fixed price for the prototype. If the problem does not need AI, the plan says so.</p></div>
-    <div class="card"><h3>Prototype</h3><p class="price">$24,000 · four weeks</p><p>The engines that compute your numbers, one verified path end to end on your real data, the model wording the result, the checks that prove it. You keep the code.</p></div>
-    <div class="card"><h3>Pilot, 60 days</h3><p class="price">$8,000</p><p>The prototype live with your people, weekly adjustments from what they meet, the operating routines installed. At day 60 you have the record to decide on.</p></div>
-    <div class="card"><h3>Operate</h3><p class="price">$1,800 a month · cloud at cost</p><p>Hosting on your cloud or ours, the routines run and read, fixes within scope, a monthly report of service levels and the bill. Twelve-month term.</p></div>
-  </div>
+        <figure class="hero-visual">
+          <div class="visual-frame" aria-hidden="true">
+            <span class="visual-grid"></span>
+            <span class="visual-ring"></span>
+            <img class="hero-image" src="./neuro-symbolic-core.webp" width="1000" height="1000" alt="" fetchpriority="high">
+            <span class="visual-axis"></span>
+          </div>
+          <figcaption class="visual-key">
+            <span><i aria-hidden="true"></i> Neural interpretation</span>
+            <span><i aria-hidden="true"></i> Symbolic logic</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
 
-  <h2 id="work">Our work: Project Legacy</h2>
-  <p>Project Legacy is a family application and a companion staff application, built end to end by Renwick Systems' founder over sixteen weeks and shipped to the stores. Its content is computed by engines from each family's own data; a set of fine-tuned language models only words the result, and a verification layer recomputes every value independently before it is served.</p>
-  <ul>
-    <li>One GPU service carrying eleven fine-tuned adapters, scaling to zero between requests; one background worker; one queue.</li>
-    <li>About $500 a month to run, with a weekly bill read against that budget.</li>
-    <li>One operator, with daily and weekly routines that post the system's health, service levels and spend to a ledger.</li>
-    <li>A public architecture record and blameless incident reports, written the day of the incident.</li>
-  </ul>
-  <p class="muted">Project Legacy is the founder's own product; it is the first case study, and the method it was built with is what Renwick Systems sells.</p>
+    <div class="capability-band">
+      <ul class="shell capability-list" aria-label="Engineering principles">
+        <li><span class="principle-icon principle-rules" aria-hidden="true"></span> Explicit business rules</li>
+        <li><span class="principle-icon principle-check" aria-hidden="true"></span> Independently verified outputs</li>
+        <li><span class="principle-icon principle-scale" aria-hidden="true"></span> Scale-to-zero infrastructure</li>
+      </ul>
+    </div>
 
-  <h2>Who builds it</h2>
-  <p>Renwick Davis, M.S. Computer Information Science. Formerly with the Department of Defense; a veteran of the 82nd Airborne Division. Renwick Systems is a veteran-owned business in Ohio.</p>
+    <section class="section shell" id="how" aria-labelledby="how-title" tabindex="-1">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Architecture</p>
+          <h2 id="how-title">From question to<br>verified answer.</h2>
+        </div>
+        <p>Language models interpret the request and explain the result. Deterministic engines apply your rules and compute the figures. An independent check verifies the result before it’s returned.</p>
+      </div>
 
-  <h2 id="start">Start with a Discovery week</h2>
-  <p class="muted">Tell us what you need to be right. We reply within one working day.</p>
-  <!-- The form posts to /api/start (src/worker.js), which emails it to the owner through Cloudflare Email Routing. -->
-  <form id="start-form" method="post" action="/api/start">
-    <div aria-hidden="true" style="position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden"><label>Leave this empty <input name="website" tabindex="-1" autocomplete="off"></label></div>
-    <label>Your name <input name="firstname" autocomplete="name" required></label>
-    <label>Business <input name="company" autocomplete="organization" required></label>
-    <label>Work email <input name="email" type="email" autocomplete="email" required></label>
-    <label>What do you need to be right? <textarea name="message" rows="3" required></textarea></label>
-    <label>Interested in
-      <select name="offer">
-        <option value="discovery_week">Discovery week</option>
-        <option value="prototype">Prototype</option>
-        <option value="pilot_60_days">Pilot, 60 days</option>
-        <option value="operate">Operate</option>
-      </select>
-    </label>
-    <button type="submit">Send</button>
-    <p id="start-status" role="status" aria-live="polite" style="margin:0"></p>
-    <p class="muted" style="font-size:13px">What you send comes to us by email, to reply to you and for nothing else. No advertising trackers on this site. <a href="/privacy">Privacy</a>.</p>
-  </form>
-</main>
+      <div class="architecture-demo">
+        <div class="demo-header">
+          <p class="eyebrow">Illustrative workflow</p>
+          <p>“Is this invoice ready to pay?”</p>
+        </div>
+        <div class="stage-selector" role="group" aria-label="Explore the workflow stages" hidden>
+          <button type="button" aria-controls="interpret" aria-pressed="true">Interpret</button>
+          <button type="button" aria-controls="compute" aria-pressed="false">Compute</button>
+          <button type="button" aria-controls="verify" aria-pressed="false">Verify</button>
+        </div>
+        <div class="stage-content" aria-live="polite">
+          <article class="stage" id="interpret">
+            <div>
+              <h3>Understand the request.</h3>
+              <p>A language model identifies the invoice and turns the question into a structured request the rules engine can use.</p>
+            </div>
+            <dl class="trace">
+              <div><dt>Intent</dt><dd>Check payment eligibility</dd></div>
+              <div><dt>Record</dt><dd>Invoice #1042</dd></div>
+            </dl>
+          </article>
+          <article class="stage" id="compute">
+            <div>
+              <h3>Apply the payment rules.</h3>
+              <p>The rules engine reads the invoice and approval records. This example policy requires approval for invoices over $1,000.</p>
+            </div>
+            <dl class="trace">
+              <div><dt>Invoice total</dt><dd>$1,240.00</dd></div>
+              <div><dt>Approval on file</dt><dd>Missing</dd></div>
+              <div><dt>Decision</dt><dd>Hold payment</dd></div>
+            </dl>
+          </article>
+          <article class="stage" id="verify">
+            <div>
+              <h3>Check the result independently.</h3>
+              <p>The verification layer recomputes the decision from the source records. Once it confirms the result, the model explains why payment is on hold.</p>
+            </div>
+            <dl class="trace">
+              <div><dt>Verified decision</dt><dd>Hold payment</dd></div>
+              <div><dt>Explanation</dt><dd>Approval required for $1,240.00</dd></div>
+            </dl>
+          </article>
+        </div>
+      </div>
 
-<footer>
-  Renwick Systems · Ohio · <a class="mail" href="mailto:hello@renwicksystems.com">hello@renwicksystems.com</a> · <a href="/privacy">Privacy</a>
-  <span class="mail-note" role="status" aria-live="polite"></span>
-</footer>
-<script>
-  // The form: send it without leaving the page, and say plainly whether it went.
-  (function () {
-    var form = document.getElementById("start-form");
-    var status = document.getElementById("start-status");
-    var button = form.querySelector("button[type=submit]");
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      button.disabled = true;
-      status.textContent = "Sending...";
-      fetch(form.action, { method: "POST", body: new FormData(form) })
-        .then(function (r) { return r.json().catch(function () { return { ok: false }; }); })
-        .then(function (res) {
-          if (res.ok) {
-            form.reset();
-            status.textContent = "Thank you. Your message is on its way, and we reply within one working day.";
-          } else {
-            status.textContent = res.error || "Your message could not be sent. Please email hello@renwicksystems.com.";
-          }
-        })
-        .catch(function () { status.textContent = "Your message could not be sent. Please email hello@renwicksystems.com."; })
-        .then(function () { button.disabled = false; });
-    });
-  })();
-  // An email link opens the visitor's mail app; where none is set up, nothing visible happens. Copy the address too.
-  document.querySelectorAll("a.mail").forEach(function (a) {
-    a.addEventListener("click", function () {
-      var address = a.getAttribute("href").replace("mailto:", "");
-      var note = a.parentNode.querySelector(".mail-note");
-      if (navigator.clipboard && note) {
-        navigator.clipboard.writeText(address).then(function () { note.textContent = " (address copied)"; }, function () {});
-      }
-    });
-  });
-</script>
+      <div class="method-notes">
+        <div><h3>Rules become tests.</h3><p>Required rules become automated checks that can block a release. When a value can’t be computed, the system can report that explicitly.</p></div>
+        <div><h3>Built for one operator.</h3><p>Scale-to-zero infrastructure limits idle compute costs. Daily and weekly routines track health, service levels, and spend.</p></div>
+      </div>
+    </section>
+
+    <section class="case-section" id="work" aria-labelledby="work-title" tabindex="-1">
+      <div class="section shell case-layout">
+        <div class="case-copy">
+          <p class="eyebrow">Featured work</p>
+          <h2 id="work-title">Project Legacy</h2>
+          <p>Our founder built and shipped Project Legacy, his own family application and companion staff app, in sixteen weeks. The system computes results from each family’s data and verifies each value independently before a fine-tuned language model puts it into words.</p>
+          <p>Daily and weekly routines log health, service levels, and spend. The project keeps a public architecture record and publishes blameless incident reports.</p>
+        </div>
+        <dl class="case-metrics" aria-label="Project Legacy operating profile">
+          <div><dt>Monthly operating cost</dt><dd>~$500</dd></div>
+          <div><dt>Fine-tuned adapters on one GPU service</dt><dd>11</dd></div>
+          <div><dt>Operator, background worker, and queue</dt><dd>1 each</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section shell" id="packages" aria-labelledby="packages-title" tabindex="-1">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Engagements</p>
+          <h2 id="packages-title">From discovery<br>to production.</h2>
+        </div>
+        <p>Each engagement has a fixed scope and price. Half of any build is due at signing. Scope changes are quoted separately.</p>
+      </div>
+      <div class="offers">
+        <article class="offer">
+          <h3>Discovery week</h3>
+          <p class="price">$6,000</p>
+          <p class="offer-term">Five working days</p>
+          <p>Define your rules, map your data, and agree on what a correct result looks like. Get a fixed-price prototype plan and a recommendation on whether the problem calls for AI.</p>
+          <a class="button button-outline" href="#start" data-offer="discovery_week">Choose Discovery</a>
+        </article>
+        <article class="offer">
+          <h3>Prototype</h3>
+          <p class="price">$24,000</p>
+          <p class="offer-term">Four weeks</p>
+          <p>Build and verify one complete workflow on your real data, from deterministic computation to the model’s explanation. You keep the code.</p>
+          <a class="button button-outline" href="#start" data-offer="prototype">Choose Prototype</a>
+        </article>
+        <article class="offer">
+          <h3>Pilot</h3>
+          <p class="price">$8,000</p>
+          <p class="offer-term">Sixty days</p>
+          <p>Put the prototype in your team’s hands, make weekly adjustments, and install operating routines. Use the pilot record to decide what comes next.</p>
+          <a class="button button-outline" href="#start" data-offer="pilot_60_days">Choose Pilot</a>
+        </article>
+        <article class="offer">
+          <h3>Operate</h3>
+          <p class="price">$1,800 <small>/ month</small></p>
+          <p class="offer-term">Twelve months · cloud at cost</p>
+          <p>Host on your cloud or ours. We run the operating routines, handle in-scope fixes, and report service levels and spend every month.</p>
+          <a class="button button-outline" href="#start" data-offer="operate">Choose Operate</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact-section" id="start" aria-labelledby="start-title" tabindex="-1">
+      <div class="section shell contact-layout">
+        <div class="contact-copy">
+          <p class="eyebrow">Start a project</p>
+          <h2 id="start-title">What does your system need to get right?</h2>
+          <p>Tell us about the workflow and what a correct result looks like. We reply within one working day.</p>
+          <a class="mail" href="mailto:hello@renwicksystems.com">hello@renwicksystems.com</a><span class="mail-note" role="status"></span>
+          <div class="founder">
+            <p class="eyebrow">Founder</p>
+            <h3>Renwick Davis</h3>
+            <p>M.S. in Computer Information Science. Formerly with the Department of Defense and a veteran of the 82nd Airborne Division. Renwick Systems is a veteran-owned business in Ohio.</p>
+          </div>
+        </div>
+
+        <form id="start-form" method="post" action="/api/start" aria-label="Project inquiry">
+          <div class="spam-trap" aria-hidden="true"><label>Leave this empty <input name="website" tabindex="-1" autocomplete="off"></label></div>
+          <div class="form-pair">
+            <label>Your name <input name="firstname" autocomplete="name" maxlength="120" required></label>
+            <label>Business <input name="company" autocomplete="organization" maxlength="160" required></label>
+          </div>
+          <label>Work email <input name="email" type="email" autocomplete="email" maxlength="254" required></label>
+          <label>Interested in
+            <select name="offer">
+              <option value="discovery_week">Discovery week</option>
+              <option value="prototype">Prototype</option>
+              <option value="pilot_60_days">Pilot, 60 days</option>
+              <option value="operate">Operate</option>
+            </select>
+          </label>
+          <label>Tell us about the workflow <textarea name="message" rows="4" maxlength="5000" required></textarea></label>
+          <button class="button button-primary" type="submit">Send project inquiry</button>
+          <p id="start-status" class="form-status" role="status"></p>
+          <p class="form-privacy">We use your details to respond to your inquiry. <a href="/privacy">Privacy policy</a></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="shell site-footer">
+    <a class="brand" href="/" aria-label="Renwick Systems home">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span>Renwick<span class="brand-accent"> Systems</span></span>
+    </a>
+    <p>Veteran-owned · Ohio, USA</p>
+    <a href="/privacy">Privacy</a>
+  </footer>
 </body>
 </html>
