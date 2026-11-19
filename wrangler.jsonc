@@ -18,6 +18,13 @@
   "send_email": [
     { "name": "START_MAIL", "destination_address": "renwickdavis.rd@gmail.com" }
   ],
+  "ratelimits": [
+    {
+      "name": "START_LIMITER",
+      "namespace_id": "19374581",
+      "simple": { "limit": 5, "period": 60 }
+    }
+  ],
   "vars": {
     "START_TO": "renwickdavis.rd@gmail.com"
   }
